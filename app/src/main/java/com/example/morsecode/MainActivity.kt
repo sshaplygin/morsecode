@@ -3,7 +3,6 @@ package com.example.morsecode
 import android.content.Context
 import android.hardware.camera2.CameraManager
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.fragment.app.Fragment

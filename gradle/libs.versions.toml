@@ -11,10 +11,8 @@ activityCompose = "1.8.0"
 composeBom = "2024.04.01"
 constraintlayout = "2.2.0"
 material = "1.12.0"
-materialVersion = "1.8.0"
 
 [libraries]
-androidx-coordinatorlayout = { module = "androidx.coordinatorlayout:coordinatorlayout", version.ref = "coordinatorlayout" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -31,7 +29,6 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-material-v180 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
