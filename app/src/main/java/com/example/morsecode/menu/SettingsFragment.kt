@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.morsecode.R
 
-class SettingsFragment: Fragment() {
+class SettingsFragment: Fragment(R.layout.fragment_settings) {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

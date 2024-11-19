@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.morsecode.R
 
-class EducationFragment: Fragment() {
+class EducationFragment: Fragment(R.layout.fragment_education) {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
