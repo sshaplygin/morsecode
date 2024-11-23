@@ -9,9 +9,10 @@
     android:gravity="center">
 
     <Button
-        android:id="@+id/sosButton"
+        android:id="@+id/toggleEncodeButton"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:layout_marginBottom="72dp"
         android:background="@drawable/sos_button"
         android:text="@string/encode_button_text"
         android:textColor="#FFFFFF"
@@ -19,29 +20,51 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.873" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/encodeInputText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/sosButton"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.043"
-        tools:layout_editor_absoluteX="100dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/encodeTypingHintText" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <EditText
+        android:id="@+id/encodeOutputText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="216dp"
-        android:text="TextView"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="100dp" />
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="48dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/toggleEncodeButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/encodeTypingHintText"
+        android:layout_width="206dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="152dp"
+        android:text="@string/encode_input_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/encodeOutputHintText"
+        android:layout_width="208dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="100dp"
+        android:text="@string/encode_output_text"
+        app:layout_constraintBottom_toTopOf="@+id/encodeOutputText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/encodeInputText"
+        app:layout_constraintVertical_bias="0.721" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
