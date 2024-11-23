@@ -6,4 +6,6 @@
     <string name="decode">Decode</string>
 
     <string name="sos_button_text">SOS</string>
+    <string name="encode_button_text">Encode</string>
+    <string name="decode_button_text">Decode</string>
 </resources>

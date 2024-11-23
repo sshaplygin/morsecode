@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.MorseCode" parent="Theme.AppCompat.Light.NoActionBar" />
+    <style name="Theme.AlertBeacon" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="colorPrimary">@color/background_main</item>
+        <item name="colorPrimaryDark">@color/background_main</item>
+    </style>
 </resources>
