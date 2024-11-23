@@ -44,6 +44,10 @@ class SOSFragment: Fragment(R.layout.fragment_sos) {
                 isFlashlightOn = false
                 job?.cancel()
 
+                cameraId?.let {
+                    toggleFlashlight(it, false)
+                }
+
                 return@setOnClickListener
             }
 
