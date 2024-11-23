@@ -14,7 +14,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class HomeFragment: Fragment(R.layout.fragment_home) {
+class SOSFragment: Fragment(R.layout.fragment_sos) {
     private var isFlashlightOn = false
 
     private lateinit var cameraManager: CameraManager
@@ -33,7 +33,7 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_sos, container, false)
         val button: Button = view.findViewById(R.id.sosButton)
 
         cameraManager = activity?.getSystemService(Context.CAMERA_SERVICE) as CameraManager;

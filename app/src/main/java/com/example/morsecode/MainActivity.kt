@@ -3,9 +3,9 @@ package com.example.morsecode
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
-import com.example.morsecode.menu.EducationFragment
-import com.example.morsecode.menu.HomeFragment
-import com.example.morsecode.menu.SettingsFragment
+import com.example.morsecode.menu.EncodeFragment
+import com.example.morsecode.menu.SOSFragment
+import com.example.morsecode.menu.DecodeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -20,15 +20,15 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.nav_home -> loadFragment(HomeFragment())
-                R.id.nav_education ->  loadFragment(EducationFragment())
-                R.id.nav_settings ->loadFragment(SettingsFragment())
+                R.id.nav_home -> loadFragment(SOSFragment())
+                R.id.nav_education ->  loadFragment(EncodeFragment())
+                R.id.nav_settings ->loadFragment(DecodeFragment())
             }
             true
         }
 
         if (savedInstanceState == null) {
-            loadFragment(HomeFragment())
+            loadFragment(SOSFragment())
         }
     }
 

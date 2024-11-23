@@ -12,7 +12,7 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:background="@drawable/sos_button"
-        android:text="@string/sos"
+        android:text="@string/sos_button_text"
         android:textColor="#FFFFFF"
         android:textSize="44sp"
         app:layout_constraintBottom_toBottomOf="parent"
