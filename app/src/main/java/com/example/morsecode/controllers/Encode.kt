@@ -2,6 +2,11 @@ package com.example.morsecode.controllers
 
 class Encode(private val dotDuration: Long = 100L) {
 
+    private val dotSymbol: Char = '.'
+    private val dashSymbol: Char = '-'
+    private val elementGapSymbol: Char = ' '
+    private val letterGapSymbol: Char = '\t'
+
     init {
         if (dotDuration < 100L) {
             throw IllegalArgumentException("dot duration must by greater 100L")
@@ -45,22 +50,42 @@ class Encode(private val dotDuration: Long = 100L) {
         '7' to arrayOf('-', '-', '.', '.', '.'),
         '8' to arrayOf('-', '-', '-', '.', '.'),
         '9' to arrayOf('-', '-', '-', '-', '.'),
+        ' ' to arrayOf(' '),
     )
 
-    fun encodeWord(word: String): Array<Long> {
-        val res = mutableListOf<Long>();
-        for (char in word) {
+    fun text(text: String): Array<Char> {
+        val res = mutableListOf<Char>();
+        for (char in text) {
             val arr = alphabet[char.uppercaseChar()] ?: continue
             for (s in arr) {
-                var duration = dotDuration
-                if (s == '-') {
-                    duration *= 3
-                }
-
-                res.add(duration);
+                res.add(s)
+                res.add(elementGapSymbol)
             }
+
+            res.removeLast()
+
+//            1 2 1
+//            1
+//
+            res.add(letterGapSymbol)
         }
+        res.removeLast()
 
         return res.toTypedArray();
+    }
+
+    fun signal(symbols: Array<Char>): Array<Long>{
+        val res = mutableListOf<Long>();
+
+        for (s in symbols) {
+            var duration = dotDuration
+            if (s == dashSymbol || s == letterGapSymbol) {
+                duration *= 3
+            }
+
+            res.add(duration);
+        }
+
+        return res.toTypedArray()
     }
 }

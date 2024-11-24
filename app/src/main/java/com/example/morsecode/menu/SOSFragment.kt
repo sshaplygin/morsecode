@@ -64,7 +64,7 @@ class SOSFragment: Fragment(R.layout.fragment_sos) {
     }
 
     private suspend fun sendSOS(cameraId: String) {
-        val dotDuration = 100L
+        val dotDuration = 300L
         val dashDuration = dotDuration * 3
         val elementGap = dotDuration
         val letterGap = dotDuration * 3
