@@ -8,4 +8,7 @@
     <string name="sos_button_text">SOS</string>
     <string name="encode_button_text">Encode</string>
     <string name="decode_button_text">Decode</string>
+
+    <string name="encode_input_text">Typing your text</string>
+    <string name="encode_output_text">Result symbols</string>
 </resources>

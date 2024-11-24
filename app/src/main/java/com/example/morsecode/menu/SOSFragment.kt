@@ -34,7 +34,7 @@ class SOSFragment: Fragment(R.layout.fragment_sos) {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_sos, container, false)
-        val button: Button = view.findViewById(R.id.sosButton)
+        val button: Button = view.findViewById(R.id.toggleSOSButton)
 
         cameraManager = activity?.getSystemService(Context.CAMERA_SERVICE) as CameraManager;
         cameraId = cameraManager.cameraIdList.getOrNull(0);
@@ -64,7 +64,7 @@ class SOSFragment: Fragment(R.layout.fragment_sos) {
     }
 
     private suspend fun sendSOS(cameraId: String) {
-        val dotDuration = 100L
+        val dotDuration = 300L
         val dashDuration = dotDuration * 3
         val elementGap = dotDuration
         val letterGap = dotDuration * 3
